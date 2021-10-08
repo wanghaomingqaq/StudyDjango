@@ -1,0 +1,39 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+    <div class="card">
+        <h1>起点月票排行榜
+            <a href='/refresh/'>
+                <span class="glyphicon glyphicon-repeat small " aria-hidden="true" style="margin-left: 60px;color: #005ba4;margin-top: 20px">
+                </span>
+            </a>
+        </h1>
+        <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>排名</th>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>分类</th>
+                    <th>状态</th>
+                    <th>阅读</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for queery in all %}
+                    <tr>
+                        <td>{{ queery.rank }}</td>
+                        <td>{{ queery.title }}</td>
+                        <td>{{ queery.author }}</td>
+                        <td>{{ queery.type }}</td>
+                        <td>{{ queery.status }}</td>
+                        <td><a href = "{{ queery.href }}">阅读</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+{% endblock %}

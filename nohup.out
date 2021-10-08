@@ -1,0 +1,41 @@
+System check identified some issues:
+
+WARNINGS:
+app01.Article: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.ArticleComment: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.Category: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.ExampleModel: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.Jilin: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.Login: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.QiDian: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.Tag: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.User: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+app01.Weibo: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the App01Config.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+
+System check identified 10 issues (0 silenced).
+[30/Sep/2021 08:47:47] "GET / HTTP/1.1" 200 1402
+[30/Sep/2021 08:47:48] "GET /static/js/script.js HTTP/1.1" 404 179
+[30/Sep/2021 08:47:48] "GET /static/css/style.css HTTP/1.1" 404 179
+[30/Sep/2021 08:48:01] "GET / HTTP/1.1" 200 1402
+[30/Sep/2021 08:48:02] "GET /static/css/style.css HTTP/1.1" 404 179
+[30/Sep/2021 08:48:02] "GET /static/js/script.js HTTP/1.1" 404 179
+[30/Sep/2021 08:48:12] "GET /home/ HTTP/1.1" 200 11714
+[30/Sep/2021 08:48:12] "GET /static/plugins/bootstrap/css/bootstrap.css HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/jquery.js HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/css/view_style.css HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/img/DevCloud-CobeHub.png HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/img/DevCloud-CloudPipeline.png HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/img/DevCloud-ProjectMan.png HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/img/DevCloud-CodeCheck.png HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/img/DevCloud-CloudBuild.png HTTP/1.1" 404 179
+[30/Sep/2021 08:48:13] "GET /static/img/DevCloud-TestMan.png HTTP/1.1" 404 179

@@ -1,0 +1,262 @@
+<style type="text/css">
+    .card{
+        -webkit-text-size-adjust: 100%;
+        color: rgb(76, 73, 72);
+        font-size: 14.5px;
+        font-family: "San Francisco", "Lucida Grande", "Lucida Sans Unicode", "helvetica neue", Verdana, tahoma, Aril, PingFangSC-Light, "hiragino sans gb", "Microsoft YaHei UI", "Microsoft YaHei", 微软雅黑, Heiti, 黑体, sans-serif;
+        line-height: 2;
+        box-sizing: border-box;
+        transition: all .3s;
+        margin: 20px;
+        text-align: center;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15);
+     }
+    .a:link{
+        color:#000000;
+        background-color: #ffffff
+    }
+    .a:visited{
+        color: #9e9999;
+        background-color: #ffffff
+    }
+
+    .a_:link{
+        color:#000000;
+        background-color:#d0f3f6
+    }
+    .a_:visited{
+        color: #9e9999;
+        background-color: #d0f3f6
+    }
+    body{
+        text-align: center;
+        background:#2f373a;
+        font-family:Arial,Helvetica,sans-serif;font-size:100%;
+        line-height:1em;color:#4e4e4e;
+        min-width:920px;
+        border-top:10px solid #0c0e0e
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/view_style.css" />
+    <script src="/static/jquery.js"></script>
+     {% block css %}
+     {% endblock %}
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top affix-top" data-spy="affix" data-offset-top="1">
+                        <div id="cookie-banner"></div>	    <nav role="navigation" aria-label="Top Level">
+                        <div class="container">
+                            <div class="nav navbar-header">
+                                <a class="navbar-brand" href="/home/"><span >Home</span></a>
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li><a href="/weibo/">Weibo</a></li>
+                                    <li><a href="/hupu/">Hupu</a></li>
+                                    <li><a href="/twitter/">Twitter</a></li>
+                                    <li><a href="/qidian/">Qidian</a></li>
+                                    <li><a href="/cat/">CatCat</a></li>
+                                    <li><a href="/jlu/">Jlu</a></li>
+                                    <li><a href="/write/">Write</a></li>
+                                    <li><a href="/admin/">Admin</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3" style="margin-top: 60px">
+
+                  <div>
+                    <div class="card">
+                        <div class="header">
+                            <h1>{{ xingqi }}</h1>
+                        </div>
+                        <div class="body">
+                            <p>{{ month }}&ensp;{{ day }},{{ years }}</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                          <h1 class="text-center">something</h1>
+                          <HR align=center width=300 color=red SIZE=8>
+    {#                    <a href="{% url 'rank' %}" style="text-decoration:none;color: black;font-size: 200%;margin-left: 20%;margin-right: 20%;">起点月票榜</a>#}
+                        <div class="card" style="width:90%;margin-top: 10px;height: 50px;background-color: #0778f6">
+                            <a href="/twitter/" style="text-decoration:none;color: #eae5e5;font-size: 200%;">推特</a>
+                        </div>
+                        <div class="card" style="width:90%;margin-top: 10px;height: 50px;background-color: #1aa9cd">
+                            <a href="{% url 'qidian' %}" style="text-decoration:none;color: #ffffff;font-size: 200%;">起点排行榜</a>
+                        </div>
+                        <div class="card" style="width:90%;margin-top: 10px;height: 50px;background-color: #367d8e">
+                            <a href="{% url 'weibo' %}" style="text-decoration:none;color: #ffffff;font-size: 200%;">微博</a>
+                        </div>
+                        <div class="card" style="width:90%;margin-top: 10px;height: 50px;background-color: #37484c">
+                            <a href="{% url 'hupu' %}" style="text-decoration:none;color: #ffffff;font-size: 200%;">虎扑</a>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-md-6" style="margin-top: 60px;text-align: left">
+                {% block content %}
+                <div>
+                  <div class="panel-body">
+                          <span>{{ contents }}</span>
+                          <div class="card bg-success" style="height: 400px">
+                            <img src="http://j4.dfcfw.com/charts/pic6/110003.png?v=0.8979304210576509" alt="..." class="img-rounded " style="margin-top: 60px">
+                          </div>
+                  </div>
+                </div>
+                <div class="AGrid-row  tool-package">
+                    <div class="col-sm-6 ">
+                        <div class="tile center-layer">
+                            <div class="layer-figure">
+                                <img src="../static/img/DevCloud-ProjectMan.png">
+                            </div>
+                            <h2 class="dev-list">项目管理</h2>
+
+                            <div class="layer-text">
+                                <p class="dev-text">
+                                    为敏捷开发团队提供简单高效的开发协作服务，包含多项目管理、敏捷迭代、需求管理、缺陷跟踪、文档管理、看板、报表统计分析等功能。
+                                </p>
+                                <div class="layer-btn">
+                                    <a href="#">
+                                        <p>立即体验</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="tile center-layer">
+                            <div class="layer-figure">
+                                <img src="../static/img/DevCloud-CobeHub.png">
+                            </div>
+                            <h2 class="dev-list">代码托管</h2>
+
+                            <div class="layer-text">
+                                <p class="dev-text">
+                                    为软件开发者提供基于Git的在线代码托管服务，包括代码克隆/下载/提交/推送/比较/合并/分支等功能。
+                                </p>
+                                <div class="layer-btn">
+                                    <a href="#">
+                                        <p>立即体验</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="tile center-layer">
+                            <div class="layer-figure">
+                                <img src="../static/img/DevCloud-CloudPipeline.png">
+                            </div>
+                            <h2 class="dev-list">流水线</h2>
+
+                            <div class="layer-text">
+                                <p class="dev-text">
+                                    提供可视化、可定制的自动交付流水线，帮助企业缩短交付周期，提升交付效率。
+                                </p>
+                                <div class="layer-btn">
+                                    <a href="#">
+                                        <p>立即体验</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="tile center-layer">
+                            <div class="layer-figure">
+                                <img src="../static/img/DevCloud-CodeCheck.png">
+                            </div>
+                            <h2 class="dev-list">代码检查</h2>
+
+                            <div class="layer-text">
+                                <p class="dev-text">
+                                    提供代码质量管理云服务，可在线进行多种语言的代码静态检查、代码安全检查、质量评分、代码缺陷改进趋势分析，辅助您管控代码质量。
+                                </p>
+                                <div class="layer-btn">
+                                    <a href="#">
+                                        <p>立即体验</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="tile center-layer">
+                            <div class="layer-figure">
+                                <img src="../static/img/DevCloud-CloudBuild.png">
+                            </div>
+                            <h2 class="dev-list">编译构建</h2>
+
+                            <div class="layer-text">
+                                <p class="dev-text">
+                                    提供配置简单的混合语言构建平台，实现编译构建云端化，自定制可视化的自动化交付流水线，支撑企业实现持续交付，提升交付效率。
+                                </p>
+                                <div class="layer-btn">
+                                    <a href="#">
+                                        <p>立即体验</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="tile center-layer">
+                            <div class="layer-figure">
+                                <img src="../static/img/DevCloud-TestMan.png">
+                            </div>
+                            <h2 class="dev-list">测试管理</h2>
+
+                            <div class="layer-text">
+                                <p class="dev-text">
+                                    提供一体化测试解决方案，覆盖测试需求、用例管理、测试任务管理、缺陷管理，多维度评估产品质量，帮助您高效管理测试活动，保障产品高质量交付。
+                                </p>
+                                <div class="layer-btn">
+                                    <a href="#">
+                                        <p>立即体验</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+
+            <div class="col-md-3" style="margin-top: 60px">
+                <div class="card" style="background-color: #77b3e2">
+                    {% for que in queery %}
+                        <div class="card" style="width: 90%;height: 70px;text-align: left;background-color: #d0f3f6">
+                            <img style="width: 35px;height: 35px" src="https://tvax3.sinaimg.cn/crop.0.0.512.512.180/007EPWBRly8gnyh9tt9gaj30e80e8t9c.jpg?KID=imgbed,tva&Expires=1620741713&ssig=hkdCvFxzJQ" alt="..." class="img-circle">
+                            <span class="text-danger">
+                                校内通知&ensp;&ensp;
+                            </span>
+                            <a class="a_" href="{{ que.href }}">
+                                {{ que.title }}</a>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    {% block js %}
+
+    {% endblock %}
+
+
+</body>
+</html>

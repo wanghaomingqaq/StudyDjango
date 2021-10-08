@@ -1,0 +1,13 @@
+
+{% extends 'home.html' %}
+
+
+{% block content %}
+    <div class="card">
+        {% for foo in img %}
+
+            <h style="text-align: center;margin-top: 20%"><img src="{{ foo }}" alt="..." class="img-circle"></h>
+
+        {% endfor %}git
+    </div>
+{% endblock %}

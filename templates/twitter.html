@@ -1,0 +1,13 @@
+
+{% extends 'home.html' %}
+
+
+{% block content %}
+    <div class="card">
+        {% for foo in a %}
+            <div class="card" style="width: 60%;height: 100px;margin-top: 30px;margin-left: 20%;margin-right: 20%;background-color: #005ba4;">
+                <h style="text-align: center;margin-top: 20%">{{ foo }}</h>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
